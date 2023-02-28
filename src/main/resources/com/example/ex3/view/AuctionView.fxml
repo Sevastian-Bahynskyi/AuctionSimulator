@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="500.0" stylesheets="@../css/auction.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ex3.view.AuctionViewController">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Item:" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="itemField" styleClass="blue-label" text="Label" />
+            <Region maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <Label fx:id="timerField" alignment="CENTER_RIGHT" text="Label" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Current bid:" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="currentBidField" styleClass="blue-label" text="Label">
+               <HBox.margin>
+                  <Insets right="120.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" text="Bidder:" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="bidderField" styleClass="blue-label" text="Label" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label alignment="BOTTOM_LEFT" text="Bid">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="bidInputField" prefWidth="90.0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onPlaceBid" text="Place bid" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+         <children>
+            <Label fx:id="errorField" styleClass="error-label" text="Label" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
